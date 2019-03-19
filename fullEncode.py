@@ -90,12 +90,11 @@ if __name__ == "__main__":
     print(unicodeToDecode())
     
     url = "%E4%B8%AD%E5%9B%BD"
-    print(UrlToEncode())
+    print(UrlToEncode(url))
     s = "中国"
-    print(UrlToDecode())
+    print(UrlToDecode(s))
     
     print(StrToBase64())
-    #print(_unicodeToDecode())
     print(Base64ToStr())
     
     
