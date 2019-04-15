@@ -14,3 +14,43 @@
 测试：StrToBase64：5rWL6K+V
 测试：Base64ToStr：5rWL6K+V
 ```
+```
+$ fullEncode.py -h
+Usage: fullEncode.py -h
+           -a        --hToHexE "&#x6d4b;&#x8bd5;"
+           -b        --hToHexD  测试
+           -c        --hToDecE "&#20013;&#22269;"
+           -d        --hToDecD 中国
+           -e        --uToE "\u4e2d\u6587"
+           -f        --uToD 中文
+           -g        --urlToE "%e4%b8%ad"
+           -i        --urlToD 首页
+           -j        --sToB64 加密
+           -k        --b64ToS "5Yqg5a+G"
+
+$ fullEncode.py -e "\u4e2d\u6587"
+中文: unicodeToEncode：\u4e2d\u6587
+
+
+
+$ fullEncode.py --HtmlToHexE "&#x6d4b;&#x8bd5;"
+测试：htmlEncodeHex: &#x6d4b;&#x8bd5;
+
+$ fullEncode.py --UnToD 中
+中：unicodeToDecode：\u4e2d
+
+$ fullEncode.py --UnToE "\u4e2d"
+中: unicodeToEncode：\u4e2d
+
+$ fullEncode.py --UrlToD "首页"
+首页：urlDecode：%e9%a6%96%e9%a1%b5
+
+$ fullEncode.py --UrlToE "%e9%a6%96%e9%a1%b5"
+首页：urlEncode：%e9%a6%96%e9%a1%b5
+
+$ fullEncode.py --StrToB64 "国"
+国：StrToBase64：5Zu9
+
+$ fullEncode.py --B64ToStr 5Zu9
+国：Base64ToStr：5Zu9
+```

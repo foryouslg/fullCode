@@ -74,22 +74,22 @@ def Base64ToStr(s="5rWL6K+V"):
 
 def _h():
     print("Usage: fullEncode.py -h")
-    print("           -a        --hToHexE \"&#x6d4b;&#x8bd5;\"")
-    print("           -b        --hToHexD  测试")
-    print("           -c        --hToDecE \"&#20013;&#22269;\"")
-    print("           -d        --hToDecD 中国")
-    print("           -e        --uToE \"\\u4e2d\\u6587\"")
-    print("           -f        --uToD 中文")
-    print("           -g        --urlToE \"%e4%b8%ad\"")
-    print("           -i        --urlToD 首页")
-    print("           -j        --sToB64 加密")
-    print("           -k        --b64ToS \"5Yqg5a+G\"")
+    print("           -a        --HtmlToHexE \"&#x6d4b;&#x8bd5;\"")
+    print("           -b        --HtmlToHexD  测试")
+    print("           -c        --HtmlToDecE \"&#20013;&#22269;\"")
+    print("           -d        --HtmlToDecD 中国")
+    print("           -e        --UnToE \"\\u4e2d\\u6587\"")
+    print("           -f        --UnToD 中文")
+    print("           -g        --UrlToE \"%e4%b8%ad\"")
+    print("           -i        --UrlToD 首页")
+    print("           -j        --StrToB64 加密")
+    print("           -k        --B64ToStr \"5Yqg5a+G\"")
 
 def main(argv):
     s = ""
     try:
-        opts,args = getopt.getopt(argv,"ha:b:c:d:e:f:g:i:j:k:",["ahToHexE=","bhToHexD=","chToDecE=","dhToDecD=",
-                                            "euToE=","fuToD=","gurlToE=","iurlToD=","jsToB64=","kb64ToS="])
+        opts,args = getopt.getopt(argv,"ha:b:c:d:e:f:g:i:j:k:",["HtmlToHexE=","HtmlToHexD=","HtmlToDecE=","HtmlToDecD=",
+                                            "UnToE=","UnToD=","UrlToE=","UrlToD=","StrToB64=","B64ToStr="])
     except getopt.GetoptError:
         _h()
         sys.exit(2)
@@ -99,26 +99,26 @@ def main(argv):
             _h()
             sys.exit()
             
-        elif opt in ("-a","--ahToHexE"):
+        elif opt in ("-a","--HtmlToHexE"):
             print(HtmlHexToEncode(arg))
-        elif opt in ("-b","--bhToHexD"):            
+        elif opt in ("-b","--HtmlToHexD"):            
             print(HtmlHexToDecode(arg))
-        elif opt in ("-c","--chToHexD"): 
+        elif opt in ("-c","--HtmlToDecE"): 
             print(HtmlDecToEncode(arg))
-        elif opt in ("-d","--dhToHexD"): 
+        elif opt in ("-d","--HtmlToDecD"): 
             print(HtmlDecToDecode(arg))
-        elif opt in ("-e","--ehToHexD"): 
+        elif opt in ("-e","--UnToE"): 
             print(unicodeToEncode(arg))
-        elif opt in ("-f","--fhToHexD"): 
+        elif opt in ("-f","--UnToD"): 
             print(unicodeToDecode(arg))
 
-        elif opt in ("-g","--ghToHexD"): 
+        elif opt in ("-g","--UrlToE"): 
             print(UrlToEncode(arg))
-        elif opt in ("-i","--ihToHexD"): 
+        elif opt in ("-i","--UrlToD"): 
             print(UrlToDecode(arg))
-        elif opt in ("-j","--jhToHexD"): 
+        elif opt in ("-j","--StrToB64"): 
             print(StrToBase64(arg))
-        elif opt in ("-k","--khToHexD"):
+        elif opt in ("-k","--B64ToStr"):
             print(Base64ToStr(arg))
     
 
