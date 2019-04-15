@@ -17,21 +17,22 @@
 ```
 $ fullEncode.py -h
 Usage: fullEncode.py -h
-           -a        --hToHexE "&#x6d4b;&#x8bd5;"
-           -b        --hToHexD  测试
-           -c        --hToDecE "&#20013;&#22269;"
-           -d        --hToDecD 中国
-           -e        --uToE "\u4e2d\u6587"
-           -f        --uToD 中文
-           -g        --urlToE "%e4%b8%ad"
-           -i        --urlToD 首页
-           -j        --sToB64 加密
-           -k        --b64ToS "5Yqg5a+G"
-
+           -a        --HtmlToHexE "&#x6d4b;&#x8bd5;"
+           -b        --HtmlToHexD  测试
+           -c        --HtmlToDecE "&#20013;&#22269;"
+           -d        --HtmlToDecD 中国
+           -e        --UnToE "\u4e2d\u6587"
+           -f        --UnToD 中文
+           -g        --UrlToE "%e4%b8%ad"
+           -i        --UrlToD 首页
+           -j        --StrToB64 加密
+           -k        --B64ToStr "5Yqg5a+G"
+```
+```
 $ fullEncode.py -e "\u4e2d\u6587"
 中文: unicodeToEncode：\u4e2d\u6587
-
-
+```
+```
 
 $ fullEncode.py --HtmlToHexE "&#x6d4b;&#x8bd5;"
 测试：htmlEncodeHex: &#x6d4b;&#x8bd5;
